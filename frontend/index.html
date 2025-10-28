@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create Poll — Cute UI</title>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <form id="pollForm" class="card" novalidate>
+      <h1 class="title">Create a New Poll</h1>
+
+      <label for="question" class="label">Poll Question</label>
+      <div class="question-wrap">
+        <textarea
+          id="question"
+          name="question"
+          class="question"
+          rows="4"
+          maxlength="200"
+          placeholder="Type your poll question here (max 200 characters)..."
+          aria-describedby="qCounter"
+          required
+        ></textarea>
+
+        <div id="qCounter" class="counter" aria-live="polite">0 / 200</div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn primary" id="createBtn">Create Poll</button>
+      </div>
+
+      <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
